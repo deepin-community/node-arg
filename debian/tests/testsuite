@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+tmpdir=$(mktemp -d -t node-arg-temp-XXXXX)
+trap "rm -rf $tmpdir" 0 INT QUIT ABRT PIPE TERM
+
+cp package.json test.js $tmpdir
+sed -i $tmpdir/test.js -e "s|require('.')|require('arg')|g"
+cd $tmpdir
+jest

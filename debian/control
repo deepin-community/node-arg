@@ -1,0 +1,21 @@
+Source: node-arg
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Julien Puydt <jpuydt@debian.org>
+Section: javascript
+Priority: optional
+Build-Depends: chai <!nocheck>, debhelper-compat (= 13), jest <!nocheck>
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Vcs-Browser: https://salsa.debian.org/js-team/node-arg
+Vcs-Git: https://salsa.debian.org/js-team/node-arg.git
+Homepage: https://github.com/vercel/arg
+
+Package: node-arg
+Architecture: all
+Multi-Arch: foreign
+Depends: nodejs, ${misc:Depends}
+Description: command line option parser for Node.js
+ It is yet another command line option parser, written
+ in JavaScript.
+ .
+ Node.js is an event-based server-side JavaScript engine.
